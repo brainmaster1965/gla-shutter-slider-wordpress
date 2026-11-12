@@ -1,0 +1,234 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ */
+/* common mixins */
+/**
+ * Content position of a single slide (9 positions).
+ * Class name: is-position-{vertical}-{horizontal}, e.g. is-position-top-left.
+ *
+ * The content box fills the whole slide and is a flex column:
+ *   - justify-content = vertical position   (top / center / bottom)
+ *   - align-items     = horizontal position (left / center / right)
+ * text-align and the button row follow the horizontal position.
+ */
+/* animations */
+@keyframes showContent {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+/* The frontend styles make the block full width (100vw) and lock text selection / touch.
+   Not wanted inside the editor canvas, so reset it here (higher specificity wins
+   regardless of the load order of style.css / editor.css). */
+.editor-styles-wrapper .wp-block-gla-shutterslider {
+  width: auto;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  touch-action: auto;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+.wp-block-gla-shutterslider {
+  padding: 20px;
+  border: 2px dashed #007cba;
+  height: auto;
+  min-height: 400px;
+  background: #f0f0f0;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview {
+  position: relative;
+  height: 400px;
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-slideno {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content {
+  position: absolute;
+  inset: 0;
+  /* top padding leaves room for the info text of the preview */
+  padding: 36px 20px 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* default (e.g. unknown value): centered */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* 9 positions, same mixin as in style.scss */
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-left .slide-buttons {
+  justify-content: flex-start;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-center {
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-center .slide-buttons {
+  justify-content: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-right {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-top-right .slide-buttons {
+  justify-content: flex-end;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-left {
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-left .slide-buttons {
+  justify-content: flex-start;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-center .slide-buttons {
+  justify-content: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-right {
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-center-right .slide-buttons {
+  justify-content: flex-end;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-left {
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-left .slide-buttons {
+  justify-content: flex-start;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-center {
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-center .slide-buttons {
+  justify-content: center;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content.is-position-bottom-right .slide-buttons {
+  justify-content: flex-end;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-author {
+  color: var(--slider-author-color);
+  font-size: var(--slider-author-size);
+  font-family: var(--slider-author-font);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-title {
+  color: var(--slider-title-color);
+  font-size: var(--slider-title-size);
+  font-family: var(--slider-title-font);
+  margin: 5px 0;
+  line-height: 1;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-topic {
+  color: var(--slider-topic-color);
+  font-size: var(--slider-topic-size);
+  font-family: var(--slider-topic-font);
+  margin: 5px 0;
+  line-height: 1;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-description {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 36px;
+  padding: 4px 16px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: default;
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-1 {
+  color: var(--slider-button1-textcolor);
+  background-color: var(--slider-button1-color);
+  border-radius: var(--slider-button1-borderradius);
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-1.has-outline {
+  border: var(--slider-button1-outlinewidth, 0px) solid var(--slider-button1-outlinecolor, transparent);
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-1:hover {
+  background-color: var(--slider-button1-hovercolor);
+  color: var(--slider-button1-hovertextcolor);
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-2 {
+  color: var(--slider-button2-textcolor);
+  background-color: var(--slider-button2-color);
+  border-radius: var(--slider-button2-borderradius);
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-2.has-outline {
+  border: var(--slider-button2-outlinewidth, 0px) solid var(--slider-button2-outlinecolor, transparent);
+}
+.wp-block-gla-shutterslider .editor-gla-shutterslider-preview .editor-gla-shutterslider-content .editor-gla-shutterslider-buttons .button-2:hover {
+  background-color: var(--slider-button2-hovercolor);
+  color: var(--slider-button2-hovertextcolor);
+}
+
+/*# sourceMappingURL=index.css.map*/
