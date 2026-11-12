@@ -4,6 +4,15 @@ A fancy slider block for the WordPress block editor (Gutenberg).
 
 ![Shutter Slider preview](assets/images/shutterslider-preview.png)
 
+---
+
+## 🚀 Live Demo
+
+Check out the interactive live demo deployed on Wordpress Playground:  
+👉 **[View Live Demo](https://playground.wordpress.net/?import-site=https://raw.githubusercontent.com/brainmaster1965/gla-shutter-slider-wordpress/main/demo.zip)**
+
+---
+
 |                    |                  |
 | ------------------ | ---------------- |
 | Version            | 1.0.1            |
@@ -49,8 +58,8 @@ Slides saved with an older version (one alignment for the whole slider) keep the
 1. Edit a page or post and open the block inserter.
 2. Add **Shutter Slider** from the **Widgets** category.
 3. In the sidebar:
-   - _General slider settings_: autoplay, interval, hover pause, shutter duration, arrows, pagination, progress bar.
-   - _Manage slides_: per slide image, texts, visible elements, **content position**, typography and buttons. Add or remove slides at the bottom.
+    - _General slider settings_: autoplay, interval, hover pause, shutter duration, arrows, pagination, progress bar.
+    - _Manage slides_: per slide image, texts, visible elements, **content position**, typography and buttons. Add or remove slides at the bottom.
 4. Check the result on the frontend via the page preview. The editor shows only the first slide, without animation.
 
 ### Develop
