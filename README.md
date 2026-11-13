@@ -1,4 +1,4 @@
-# Gla Shutter Slider
+# <span style="display: inline-block; vertical-align: middle;"><img src="https://img.shields.io/badge/v1.0.1-f1683a?style=for-the-badge&logoColor=white" alt="v2.3.0"></span> Gla Shutter Hero Slider - Wordpress
 
 A fancy slider block for the WordPress block editor (Gutenberg).
 
@@ -58,8 +58,8 @@ Slides saved with an older version (one alignment for the whole slider) keep the
 1. Edit a page or post and open the block inserter.
 2. Add **Shutter Slider** from the **Widgets** category.
 3. In the sidebar:
-    - _General slider settings_: autoplay, interval, hover pause, shutter duration, arrows, pagination, progress bar.
-    - _Manage slides_: per slide image, texts, visible elements, **content position**, typography and buttons. Add or remove slides at the bottom.
+   - _General slider settings_: autoplay, interval, hover pause, shutter duration, arrows, pagination, progress bar.
+   - _Manage slides_: per slide image, texts, visible elements, **content position**, typography and buttons. Add or remove slides at the bottom.
 4. Check the result on the frontend via the page preview. The editor shows only the first slide, without animation.
 
 ### Develop
