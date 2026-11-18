@@ -20,7 +20,7 @@ The block is rendered on the server (`render.php`), needs no jQuery and no exter
 
 * **Shutter transition** - the outgoing slide is wiped away to reveal the next one. A jump via pagination is always one single shutter.
 * **Scroll parallax** - the slide image moves while the page scrolls (reduced on tablets, off on smartphones).
-* **Full width** - the slider breaks out of the content column and uses the full viewport width.
+* **Full width** - supports the "Wide" and "Full width" alignments of the block editor and follows the layout of your theme.
 * **Content position per slide** - every slide has its own position, 9 options: top / center / bottom x left / center / right.
 * **Animated content** - author, title, topic, description and buttons fade in one after the other once the image is revealed.
 * **Per slide settings** - image (media library), texts, visible elements, typography (color, size, font family for author, title and topic) and two buttons with their own colors, hover colors, border radius and outline.
