@@ -4,7 +4,7 @@ Tags:              block, slider, hero, slideshow, parallax
 Requires at least: 6.8
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.0.1
+Stable tag:        1.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,7 @@ The demo images in `assets/images/` were generated with Google Gemini (AI). They
 1. Upload the plugin files to the `/wp-content/plugins/gla-shutterslider` directory, or upload the ZIP via *Plugins > Add New > Upload Plugin*.
 2. Activate the plugin through the *Plugins* screen in WordPress.
 3. Edit a page or post and open the block inserter.
-4. Add the **Shutter Slider** block from the **GLA Blocks** category.
+4. Add the **Shutter Slider** block from the **widgets** category.
 5. Use the block sidebar: *General slider settings* for autoplay, interval, shutter duration and navigation, *Manage slides* for image, texts, content position, typography and buttons of every slide.
 6. Use the preview/external link of the editor to check the result on the frontend. The editor shows only the first slide.
 
@@ -84,6 +84,12 @@ WordPress 6.8 or newer and PHP 7.4 or newer.
 
 == Changelog ==
 
+= 1.1.0 =
+* New: the block supports the alignments "Wide" and "Full width" (block toolbar). New sliders start with full width.
+* Changed: full width is now handled by the theme's own alignment (alignfull / alignwide) instead of a 100vw calculation. The scrollbar width script was removed.
+* Fixed: in themes with a global padding the slider started at the content edge and overflowed the viewport on the right.
+* Fixed: the editor preview now follows the selected alignment.
+
 = 1.0.1 =
 * New: autoplay pauses while a slider is not visible (several sliders per page no longer rotate in the background).
 * New: slide images are lazy loaded; only the first image of the first slider on a page loads eagerly.
@@ -104,6 +110,9 @@ WordPress 6.8 or newer and PHP 7.4 or newer.
 * Initial release with the Shutter Slider block: shutter transition, scroll parallax, autoplay, swipe, pagination, arrows, progress bar, per slide texts, typography and buttons.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+The slider now uses the WordPress alignment options (Wide / Full width) and fits themes with a global padding. Existing sliders switch to full width. Run `npm run build` if you build from source.
 
 = 1.0.1 =
 Autoplay pauses for sliders that are off screen and images are lazy loaded. Content alignment is set per slide since 1.0.0; existing sliders keep their previous alignment until you change a slide. Run `npm run build` if you build from source.

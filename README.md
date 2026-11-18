@@ -1,4 +1,4 @@
-# <span style="display: inline-block; vertical-align: middle;"><img src="https://img.shields.io/badge/v1.0.1-f1683a?style=for-the-badge&logoColor=white" alt="v2.3.0"></span> Gla Shutter Hero Slider - Wordpress
+# <span style="display: inline-block; vertical-align: middle;"><img src="https://img.shields.io/badge/v1.1.0-f1683a?style=for-the-badge&logoColor=white" alt="v1.1.0"></span> Gla Shutter Hero Slider - Wordpress
 
 A fancy slider block for the WordPress block editor (Gutenberg).
 
@@ -15,7 +15,7 @@ Check out the interactive live demo deployed on Wordpress Playground:
 
 |                    |                  |
 | ------------------ | ---------------- |
-| Version            | 1.0.1            |
+| Version            | 1.1.0            |
 | Requires WordPress | 6.8              |
 | Requires PHP       | 7.4              |
 | License            | GPL-2.0-or-later |
@@ -24,7 +24,7 @@ Check out the interactive live demo deployed on Wordpress Playground:
 
 - **Shutter transition**: the outgoing slide is wiped away to reveal the next one. A jump via pagination is always a single shutter.
 - **Scroll parallax**: the image moves while scrolling (reduced on tablets, off on smartphones).
-- **Full width**: breaks out of the content column and uses the full viewport width.
+- **Full width**: supports the "Wide" and "Full width" alignments of the block editor and follows the layout of your theme.
 - **Content position per slide**: 9 positions for every single slide (see below).
 - **Animated content**: author, title, topic, description and buttons fade in one after the other once the image is revealed.
 - **Per slide settings**: image (media library), texts, visible elements, typography (color, size, font family for author, title, topic) and two buttons with colors, hover colors, border radius and outline.
@@ -91,6 +91,13 @@ gla-shutterslider/
 ```
 
 ## Changelog
+
+### 1.1.0
+
+- **New:** the block supports the alignments "Wide" and "Full width" (block toolbar). New sliders start with full width.
+- **Changed:** full width is now handled by the theme's own alignment (`alignfull` / `alignwide`) instead of a `100vw` calculation. The scrollbar width script was removed.
+- **Fixed:** in themes with a global padding the slider started at the content edge and overflowed the viewport on the right.
+- **Fixed:** the editor preview now follows the selected alignment.
 
 ### 1.0.1
 

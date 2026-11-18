@@ -258,7 +258,7 @@ function initializeGlaShutterSlider(container) {
  * so the full-width slider never causes horizontal scrolling when a classic
  * (non-overlay) scrollbar is visible.
  */
-function updateScrollbarWidth() {
+/* function updateScrollbarWidth() {
 	const scrollbarWidth = Math.max(
 		0,
 		window.innerWidth - document.documentElement.clientWidth,
@@ -267,7 +267,7 @@ function updateScrollbarWidth() {
 		"--gla-scrollbar-width",
 		`${scrollbarWidth}px`,
 	);
-}
+} */ // 2026.11.18
 
 /**
  * Parallax: one shared scroll listener (rAF-throttled) for all slider instances.
@@ -304,7 +304,7 @@ function initParallax(containers) {
 	update();
 	window.addEventListener("scroll", requestUpdate, { passive: true });
 	window.addEventListener("resize", () => {
-		updateScrollbarWidth();
+		// updateScrollbarWidth(); // 2026.11.18
 		requestUpdate();
 	});
 }
@@ -318,7 +318,7 @@ domReady(() => {
 	);
 	if (sliderContainers.length === 0) return;
 
-	updateScrollbarWidth();
+	// updateScrollbarWidth(); // 2026.11.18
 
 	sliderContainers.forEach((container) => {
 		// Avoid double initialization (useful for AJAX or caching plugins)

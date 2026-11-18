@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Gla Shutter Slider
  * Description:       A fancy slider block for WP Gutenberg.
- * Version:           1.0.1
+ * Version:           1.1.0
  * Requires at least: 6.8
  * Requires PHP:      7.4
  * Author:            GLa

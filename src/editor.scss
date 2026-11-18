@@ -7,10 +7,10 @@
    Not wanted inside the editor canvas, so reset it here (higher specificity wins
    regardless of the load order of style.css / editor.css). */
 .editor-styles-wrapper .wp-block-gla-shutterslider {
-	width: auto;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-	max-width: 100% !important;
+	/* width: auto; */ // 2026.11.18
+	/* margin-left: 0 !important; */ // 2026.11.18
+	/* margin-right: 0 !important; */ // 2026.11.18
+	/* max-width: 100% !important; */ // 2026.11.18
 	touch-action: auto;
 	user-select: auto;
 	-webkit-user-select: auto;
